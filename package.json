@@ -1,0 +1,32 @@
+{
+	"name": "sass-breakpoint-range",
+	"version": "1.0.0",
+	"description": "A range resizing value function with configurable breakpoints.",
+	"keywords": [
+		"SASS Breakpoint Range",
+		"CSS range",
+		"SASS function",
+		"SCSS",
+		"SASS",
+		"CSS"
+	],
+	"homepage": "https://github.com/JoshuaSand0val/sass-breakpoint-range#readme",
+	"license": "MIT",
+	"author": "Joshua Elijah Sandoval",
+	"files": [
+		"scss",
+		"_index.scss",
+		"CHANGELOG.md",
+		"LICENSE",
+		"README.md"
+	],
+	"main": "scss/_index.scss",
+	"style": "scss/_index.scss",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/JoshuaSand0val/sass-breakpoint-range.git"
+	},
+	"devDependencies": {
+		"sass": "^1.63.6"
+	}
+}
