@@ -1,12 +1,10 @@
-// Range: Responsive $start, $end range $-breakpoints resizing.
+// Range: Responsive $start, $end range $breakpoints resizing.
 
 @use "sass:math" as math;
-
-$-breakpoints: 0px, 180px, 320px, 640px, 960px, 1280px, 1440px !default;
-$-property: --range !default;
+@use "variables" as *;
 
 @function range($start, $end) {
-	@return calc($start + ($end - $start) * var($-property));
+	@return calc($start + ($end - $start) * var($property));
 }
 
 :where(:root, :root > *) {
@@ -14,9 +12,9 @@ $-property: --range !default;
 }
 
 :where(:root > *) {
-	@each $width in $-breakpoints {
+	@each $width in $breakpoints {
 		@container (min-width: #{$width}) {
-			#{$-property}: math.div($width, math.max($-breakpoints...));
+			#{$property}: math.div($width, math.max($breakpoints...));
 		}
 	}
 }
