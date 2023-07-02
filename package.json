@@ -1,6 +1,6 @@
 {
 	"name": "sass-breakpoint-range",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A range resizing value function with configurable breakpoints.",
 	"keywords": [
 		"SASS Breakpoint Range",
