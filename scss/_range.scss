@@ -7,11 +7,11 @@
 	@return calc($start + ($end - $start) * var($property));
 }
 
-:where(:root, :root > *) {
+:where(:root, body) {
 	container-type: inline-size;
 }
 
-:where(:root > *) {
+:where(:root *) {
 	@each $width in $breakpoints {
 		@container (min-width: #{$width}) {
 			#{$property}: math.div($width, math.max($breakpoints...));
