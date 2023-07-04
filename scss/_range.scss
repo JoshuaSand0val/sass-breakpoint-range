@@ -1,10 +1,19 @@
 // Range: Responsive $start, $end range $breakpoints resizing.
 
+@use "sass:list" as list;
 @use "sass:math" as math;
 @use "variables" as *;
 
 @function range($start, $end) {
-	@return calc($start + ($end - $start) * var($property));
+	$value: ();
+	@each $start, $end in list.zip($start, $end) {
+		$range: calc($start + ($end - $start) * var($property));
+		$value: list.append($value, $range);
+	}
+	@if list.length($start) != list.length($end) {
+		@error "Range parameters $start and $end must be the same length.";
+	}
+	@return $value;
 }
 
 :where(:root, body) {
