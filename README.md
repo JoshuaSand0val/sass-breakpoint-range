@@ -42,8 +42,9 @@ $ npm install sass-breakpoint-range --save-dev
 @use "range" as *;
 
 h1 {
-	// Syntax: range($start: <length>, $end: <length>);
+	// Syntax: range($start: <length>+, $end: <length>+);
 	font-size: range(32px, 64px);
+	margin: range(8px 0px, 16px 0px);
 }
 ```
 
